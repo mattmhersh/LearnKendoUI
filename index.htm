@@ -3,23 +3,18 @@
 	<head>
 		<meta charset="utf-8" />	
         <title>Learning Kendo UI</title>	
+    <style>
+        html, body { background-color: green;}
+        .chart-wrapper { padding-top: 5em;  background-color: green; text-align: center;}
+        .mychart { width: 600px; background-color: green; border: solid 1px black;}     
+    </style>        
 	</head>
 	<body>		
 	<div id="example" class="k-content">    
     <div class="chart-wrapper">
         <div id="chart" class="mychart"></div>
     </div>
-    <style>
-    	html, body { background-color: green;}
-    	.chart-wrapper { padding-top: 5em;  background-color: green; text-align: center;}
-    	.mychart { width: 600px; background-color: green; border: solid 1px black;}    	
-    </style>
-    <!-- jQuery -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <!-- Google 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-    <!-- Microsoft 
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js" type="text/javascript"></script> -->
     <script>
     	var jquery = $;
         function createChart() {
@@ -85,10 +80,8 @@
                 }
             });
         }
-
         var doc = jquery(document);
         doc.ready(createChart);
-        doc.bind("kendo:skinChange", createChart);
     </script>        
     <script src="http://cdn.kendostatic.com/2013.2.918/js/kendo.dataviz.min.js"></script>		
 	</body>
