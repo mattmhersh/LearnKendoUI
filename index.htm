@@ -1,88 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />	
-        <title>Learning Kendo UI</title>	
-    <style>
-        html, body { background-color: green;}
-        .chart-wrapper { padding-top: 5em;  background-color: green; text-align: center;}
-        .mychart { width: 600px; background-color: green; border: solid 1px black;}     
-    </style>        
-	</head>
-	<body>		
-	<div id="example" class="k-content">    
+    <head>
+        <meta charset="utf-8" />    
+        <title>Learning Kendo UI</title>    
+        <style>
+html,body{background-color:green;}.chart-wrapper{padding-top:5em;background-color:green;text-align:center;}.mychart{width:600px;background-color:green;border:solid 1px black;}   
+        </style>           
+    </head>
+    <body>      
+    <div id="example" class="k-content">    
     <div class="chart-wrapper">
         <div id="chart" class="mychart"></div>
     </div>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-    	var jquery = $;
-        function createChart() {
-            jquery("#chart").kendoChart({
-                renderAs: "canvas",
-                title: {
-                    position: "top",
-                    text: "Asset Allocation",
-                    color: "white"
-                },
-                legend: {
-                    visible: true
-                },
-                chartArea: {
-                    background: "",
-                    width: 600,
-                    height: 300                 
-                },
-                seriesDefaults: {
-                    overlay: {
-                        gradient: null
-                    },                    
-                    labels: {
-                        visible: true,
-                        background: "transparent",
-                        template: "#= category #: #= value#%",
-                        color: "white",
-                        font: "14px sans-serif"
-                    }
-                },
-                series: [{
-                    type: "pie",
-                    startAngle: 150,
-                    data: [{
-                        category: "Asia",
-                        value: 53.8,
-                        color: "#9de219"
-                    },{
-                        category: "Europe",
-                        value: 16.1,
-                        color: "#90cc38"
-                    },{
-                        category: "Latin America",
-                        value: 11.3,
-                        color: "#068c35"
-                    },{
-                        category: "Africa",
-                        value: 9.6,
-                        color: "#006634"
-                    },{
-                        category: "Middle East",
-                        value: 5.2,
-                        color: "#004d38"
-                    },{
-                        category: "North America",
-                        value: 3.6,
-                        color: "#033939"
-                    }]
-                }],
-                tooltip: {
-                    visible: true,
-                    format: "{0}%"
-                }
-            });
-        }
-        var doc = jquery(document);
-        doc.ready(createChart);
+var jquery=$;function createChart(){jquery("#chart").kendoChart({renderAs:"canvas",title:{position:"top",text:"Asset Allocation",color:"white"},legend:{visible:true},chartArea:{background:"",width:600,height:300},seriesDefaults:{overlay:{gradient:null},labels:{visible:true,background:"transparent",template:"#= category #: #= value#%",color:"white",font:"14px sans-serif"}},series:[{type:"pie",startAngle:150,data:[{category:"Asia",value:53.8,color:"#9de219"},{category:"Europe",value:16.1,color:"#90cc38"},{category:"Latin America",value:11.3,color:"#068c35"},{category:"Africa",value:9.6,color:"#006634"},{category:"Middle East",value:5.2,color:"#004d38"},{category:"North America",value:3.6,color:"#033939"}]}],tooltip:{visible:true,format:"{0}%"}});}
+var doc=jquery(document);doc.ready(createChart);
     </script>        
-    <script src="http://cdn.kendostatic.com/2013.2.918/js/kendo.dataviz.min.js"></script>		
-	</body>
+    <script src="http://cdn.kendostatic.com/2013.2.918/js/kendo.dataviz.min.js"></script>       
+    </body>
 </html> 
